@@ -8,7 +8,7 @@ export default class AnalyticsInterface extends core {
     constructor(projectId) {
         super(projectId);
 
-        this.impression();
+        // this.impression();
     }
 
     async view() {
