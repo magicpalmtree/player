@@ -38,16 +38,16 @@ export default class core {
     }
 
     async post(data, path){
-        // try {
-        //     Object.assign(data, {
-        //         project_id: this.projectId
-        //     });
-        //     const { analyticsUrl, analyticsKey } = useConfig();
-        //     const url = analyticsUrl.value + "/api/" + analyticsKey.value + '/interactr/' + path;
-        //     axios.post(url, data);
-        // } catch(e) {
-        //     console.log(e);
-        // }
+        try {
+            Object.assign(data, {
+                project_id: this.projectId
+            });
+            const { analyticsUrl, analyticsKey } = useConfig();
+            const url = analyticsUrl.value + "/api/" + analyticsKey.value + '/interactr/' + path;
+            axios.post(url, data);
+        } catch(e) {
+            console.log(e);
+        }
     }
 
     async query(data, path) {
